@@ -2,14 +2,16 @@ name: Check Documentation
 
 on:
   pull_request:
+    branches: [cwci-e21da82db5c919e0d540-base]
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
 
   doc:
     name: Build documentation
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       # https://github.com/actions/setup-go#supported-version-syntax
       # ex:
